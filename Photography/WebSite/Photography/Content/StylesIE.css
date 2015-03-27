@@ -1,0 +1,82 @@
+@CHARSET "UTF-8";
+
+html, body
+{
+	text-align: center;
+}
+#wrapper
+{
+	margin: 0 auto;
+	text-align: left;
+}
+
+#logo
+{
+	float: left;
+}
+
+nav
+{
+	float: left;
+}
+
+#mainContainer
+{
+	clear: both;
+}
+
+
+/* INDEX */
+
+#mainContainerHome
+{
+	clear: both;
+	width: 1000px;
+}
+
+#slideArrowsContainer
+{
+    float: left;
+}
+
+#rightArrowsContainer 
+{
+    float: left;
+}
+
+
+#leftArrowsContainer
+{
+    float: left;
+}
+
+.slider
+{
+	float: left;
+}
+
+
+/* CONTACT */
+
+#contactAside
+{
+	float: left;
+}
+
+#contactContainer
+{
+	float: left;
+}
+
+
+/* DETAILS */
+
+#sectionCoverContainer
+{
+	float: left;
+}
+
+#thumbsContainer
+{
+	float: left;
+}

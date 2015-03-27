@@ -1,0 +1,12 @@
+﻿@model CategoryViewModel
+
+<section id="mainContainer" style="background-image: url('@Url.Content(@Model.BackgroundImagePath)');">
+	<div id="aboutContainer">
+		<section id="about">
+			<div class="title">
+				@Model.Name
+			</div>
+			@Model.Description
+		</section>
+	</div>
+</section>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Test flexible</title>
+	<style type="text/css">
+		*
+		{
+			padding: 0px;
+			margin: 0px;
+		}
+		
+		html, body
+		{
+			width: 100%;
+			display: -webkit-box;
+			-webkit-box-pack: center;
+			font: 13px Lucida Sans Unicode; 
+		}
+		
+		/* So older browsers recognise new html 5 tags as divs */
+		article, aside, details, figcaption, figure,
+		footer, header, hgroup, menu, nav, section 
+		{ 
+		    display:block;
+		}
+		
+		#wrapper
+		{
+			max-width: 1000px;
+			-webkit-box-pack: center;
+			-webkit-box-orient: vertical;
+			-webkit-box-flex: 1;
+			display: -webkit-box;			
+		}
+
+		.horizontalWrapper
+		{
+			max-width: 1000px;	
+			height: 100px;
+			-webkit-box-pack: center;
+			-webkit-box-flex: 1;
+			-webkit-box-orient: horizontal;
+			display: -webkit-box;
+			
+			/* VERTICAL ALIGN
+			-webkit-box-align: center;
+			*/
+		}
+	
+		#leftBox
+		{
+			width: 300px;
+			-webkit-box-flex: 0;
+			background: green;
+			margin: 10px;
+		}
+		
+		#rightBox
+		{
+			-webkit-box-flex: 1;
+			background: red;
+			margin: 10px;			
+		}
+
+		#leftBoxFlex
+		{
+			-webkit-box-flex: 1;
+			background: green;
+			margin: 10px;
+		}
+		
+		#middleBoxFlex
+		{
+			width: 200px;
+			-webkit-box-flex: 0;
+			background: yellow;
+			margin: 10px;			
+		}
+
+		#rightBoxFlex
+		{
+			-webkit-box-flex: 2;
+			background: red;
+			margin: 10px;			
+		}
+	
+	
+		#verticalWrapper
+		{
+			max-width: 1000px;
+			-webkit-box-pack: center;
+			-webkit-box-orient: vertical;
+			-webkit-box-flex: 1;
+			display: -webkit-box;			
+		}
+	
+		#outsideBox
+		{
+			max-width: 1000px;
+			height: 200px;
+			background: green;
+			-webkit-box-flex: 0;
+			margin: 10px;
+		}
+		
+		#insideBox
+		{
+			max-width: 400px;
+			height: 80px;
+			margin: 100px 0px 0px 50px;
+			-webkit-box-flex: 1;
+			background: red;
+			border: 5px solid yellow;
+		}
+	
+	
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="horizontalWrapper">
+			<div id="leftBox">
+			</div>
+			<div id="rightBox">
+			</div>
+		</div>
+		<div class="horizontalWrapper">
+			<div id="leftBoxFlex">
+			</div>
+			<div id="middleBoxFlex">
+			</div>
+			<div id="rightBoxFlex">
+			</div>
+		</div>
+		<div id="verticalWrapper">
+			<div id="outsideBox">
+				<div id="insideBox">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+</body>

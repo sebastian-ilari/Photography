@@ -1,0 +1,44 @@
+﻿@model CategoryViewModel
+
+<section id="mainContainerHome">
+	<div class="slider">
+		<ul>
+            @foreach (string imagePath in @Model.BackgroundImagePathList)
+            {
+                <li><img src="@Url.Content(@imagePath)" alt="image"></li>
+            }
+		</ul>
+	</div>
+
+ 	<div id="slideArrowsContainer">
+		<div id="leftArrowsContainer">
+			<img data-dir="prev" src='@Url.Content("~/Images/leftArrowOn.png")' />
+			<img data-dir="prev" src='@Url.Content("~/Images/leftArrowOff.png")' class="offArrow" />
+		</div>
+		<div id="rightArrowsContainer">
+			<img data-dir="next" src='@Url.Content("~/Images/rightArrowOn.png")' />
+			<img data-dir="next" src='@Url.Content("~/Images/rightArrowOff.png")' class="offArrow" />
+		</div>
+	</div> 
+</section>
+
+@section scripts
+{
+
+    <script src='@Url.Content("~/Scripts/slider.js")'></script>
+
+    <script>
+
+        (function () {
+            var container = $('div.slider').css('overflow', 'hidden').children('ul'),
+                slider = new Slider(container, $('#slideArrowsContainer'));
+
+            slider.nav.find('img').on('click', function () {
+                slider.setCurrent($(this).data('dir'));
+                slider.transition();
+            });
+        })();
+
+    </script>
+
+}

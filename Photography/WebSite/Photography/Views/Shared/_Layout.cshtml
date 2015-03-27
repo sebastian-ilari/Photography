@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sebastian Ilari - Photography</title>
+        
+        @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/themes/base/css")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/modernizr")
+
+        <script>
+	        if (navigator.appName == 'Microsoft Internet Explorer') {
+	            $('head').append('<link rel="stylesheet" type="text/css" href="/Content/StylesIE.css">');
+	        }
+        </script>
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    <body>
+	    <div id="wrapper">
+		    <header>
+			    <div id="logo">
+				    @Html.ActionLink("Sebastian Ilari - Photography", "Index", "Home")
+			    </div>
+			    <nav>
+                    @Html.Action("Menu", "Menu")
+			    </nav>
+		    </header>
+
+            @RenderBody()
+
+		    <footer>
+			    &copy; 2013 Photography
+		    </footer>	
+	    </div>
+    </body>
+
+    @RenderSection("scripts", required: false)
+
+</html>

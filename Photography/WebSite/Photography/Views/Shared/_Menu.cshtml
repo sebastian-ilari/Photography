@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Category>
+
+<ul>
+    @foreach (Category category in @Model)
+    {
+        if ((Convert.ToInt32(@Request.RequestContext.RouteData.Values["id"]).Equals(0) && category.Id.Equals(1))
+            || Convert.ToInt32(@Request.RequestContext.RouteData.Values["id"]).Equals(category.Id))
+        {
+            <li>@Html.ActionLink(category.Name, "Index", 
+                        category.DisplayType.ToString(), 
+                        new { id = category.Id }, 
+                        new { @class = "selected" })</li>
+        }
+        else
+        {
+            <li>@Html.ActionLink(category.Name, "Index", 
+                        category.DisplayType.ToString(), 
+                        new { id = category.Id }, 
+                        null)</li>
+        }
+    }
+</ul>

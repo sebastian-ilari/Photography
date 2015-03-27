@@ -1,0 +1,47 @@
+﻿@model CategoryViewModel
+
+<section id="mainContainer">
+			
+	<aside id="contactAside">
+		<img src="@Url.Content(@Model.CoverImagePath)" id="contactImage"/>
+	</aside>
+			
+	<section id="contactContainer">
+		<div class="title">
+			@Model.Name
+		</div>
+		<div id="contactInformation">
+			Alzaga 1400<br/>
+			Temperley, CP: 1834<br/>
+			sebahex@gmail.com<br/>
+			Tel: +54 4245-9690<br/>
+			Mobile: +54 1162795638<br/>			
+		</div>
+
+        <div id="contactResult">
+        </div>
+
+        <div id="contactForm">
+
+            @using (Ajax.BeginForm("ContactPost", new AjaxOptions { UpdateTargetId = "contactResult" }))
+            {
+                <div class="textbox">
+                    <input type="text" name="txtName" placeholder="Name" />
+                </div>
+                <div class="textbox">
+                    <input type="email"  name="txtEmail" placeholder="Email" required />
+                </div>
+                <div class="textbox">
+                    <input type="text" name="txtSubject" placeholder="Subject" />
+                </div>
+                <div class="textarea">
+                    <textarea name="txtMessage"></textarea>
+                </div>
+                <div id="sendButtonContainer">
+                    <input type="submit" id="sendButton" value="Send" />
+                </div>
+            }
+
+        </div>
+	</section>
+</section>

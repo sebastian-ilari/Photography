@@ -1,0 +1,15 @@
+﻿@model List<string>
+
+<div class="thumbsRow">
+
+    @for (int i = 1; i <= @Model.Count(); i++)
+    {
+        @:<img src="@Url.Content(@Model[i - 1])" class="thumbnail"/>
+         
+        if ((i % 5) == 0 && i != @Model.Count)
+        {
+            @:</div><div class="thumbsRow">
+        }
+    }
+
+</div>

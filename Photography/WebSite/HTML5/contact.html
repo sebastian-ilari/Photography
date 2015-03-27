@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sebastian Ilari - Photography</title>
+	<link rel="stylesheet" href="css/styles.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	
+	<script>
+
+		if (navigator.appName == 'Microsoft Internet Explorer') {
+			$('head').append('<link rel="stylesheet" type="text/css" href="css/stylesie9.css">');
+		}
+		
+	</script>
+
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div id="logo">
+				<a href="index.html" title="Home">Sebastian Ilari - Photography</a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="Home">Home</a></li>
+					<li><a href="about.html" title="About">About</a></li>
+					<li><a href="landscape.html" title="Landscape">Landscape</a></li>
+					<li><a href="#" title="Nature">Nature</a></li>
+					<li><a href="#" title="Architecture">Architecture</a></li>
+					<li><a href="#" title="Portraits">Portraits</a></li>
+					<li><a href="contact.html" title="Contact" class="selected">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="mainContainer">
+			
+			<aside id="contactAside">
+				<img src="images/thumbnails/contact.jpg" id="contactImage"/>
+			</aside>
+			
+			<section id="contactContainer">
+				<div class="title">
+					Contact
+				</div>
+				<div id="contactInformation">
+					Alzaga 1400<br/>
+					Temperley, CP: 1834<br/>
+					sebahex@gmail.com<br/>
+					Tel: +54 4245-9690<br/>
+					Mobile: +54 1162795638<br/>			
+				</div>			
+				<form>
+					<div class="textbox">
+						<input type="text" id="txtName" placeholder="Name"/>
+					</div>
+					<div class="textbox">				
+						<input type="email" id="txtEmail" placeholder="Email"/>
+					</div>
+					<div class="textbox">
+						<input type="text" id="txtSubject" placeholder="Subject"/>
+					</div>
+					<div class="textarea">
+						<textarea rows=8 cols=50 id="txtBody"></textarea>
+					</div>
+					<div id="sendButtonContainer">
+						<input type="submit" id="sendButton" value="Send"/>
+					</div>
+				</form>
+			</section>
+		</section>
+		 
+		<footer>
+			&copy; 2013 OpenMinder
+		</footer>	
+	</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sebastian Ilari - Photography</title>
+	<link rel="stylesheet" href="css/styles.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	
+	<script>
+
+		if (navigator.appName == 'Microsoft Internet Explorer') {
+			$('head').append('<link rel="stylesheet" type="text/css" href="css/stylesie9.css">');
+		}
+		
+	</script>
+
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div id="logo">
+				<a href="index.html" title="Home">Sebastian Ilari - Photography</a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="Home" class="selected">Home</a></li>
+					<li><a href="about.html" title="About">About</a></li>
+					<li><a href="landscape.html" title="Landscape">Landscape</a></li>
+					<li><a href="#" title="Nature">Nature</a></li>
+					<li><a href="#" title="Architecture">Architecture</a></li>
+					<li><a href="#" title="Portraits">Portraits</a></li>
+					<li><a href="contact.html" title="Contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="mainContainerHome">
+			<div class="slider">
+				<ul>
+					<li><img src="images/backgrounds/back-01.jpg" alt="image"></li>
+					<li><img src="images/backgrounds/back-02.jpg" alt="image"></li>
+					<li><img src="images/backgrounds/back-03.jpg" alt="image"></li>
+					<li><img src="images/backgrounds/back-04.jpg" alt="image"></li>
+					<li><img src="images/backgrounds/back-05.jpg" alt="image"></li>
+					<li><img src="images/backgrounds/back-06.jpg" alt="image"></li>
+					<li><img src="images/backgrounds/back-07.jpg" alt="image"></li>
+					<li><img src="images/backgrounds/back-08.jpg" alt="image"></li>
+				</ul>
+			</div>
+
+ 			<div id="slideArrowsContainer">
+				<div id="leftArrowsContainer">
+					<img data-dir="prev" src="images/leftArrowOn.png" class="slideArrow"/>
+					<img data-dir="prev" src="images/leftArrowOff.png" class="slideArrow" id="offArrow" />
+				</div>
+				<div id="rightArrowsContainer">
+					<img data-dir="next" src="images/rightArrowOn.png" class="slideArrow"/>
+					<img data-dir="next" src="images/rightArrowOff.png" class="slideArrow" id="offArrow" />
+				</div>
+			</div> 
+		</section>
+
+		<footer>
+			&copy; 2013 OpenMinder
+		</footer>	
+	</div>
+</body>
+
+<script src="js/slider.js"></script>
+
+<script>
+
+(function() {
+	var container = $('div.slider').css('overflow', 'hidden').children('ul'),
+		slider = new Slider( container, $('#slideArrowsContainer') );
+
+	slider.nav.find('img').on('click', function() {
+		slider.setCurrent( $(this).data('dir') );
+		slider.transition();
+	});		
+})();
+
+</script>
+
+</html>

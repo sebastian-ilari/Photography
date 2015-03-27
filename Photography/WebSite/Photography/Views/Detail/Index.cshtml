@@ -1,0 +1,14 @@
+﻿@model CategoryViewModel
+
+<section id="mainContainer">
+	<aside id="sectionCoverContainer">
+		<img src="@Url.Content(@Model.CoverImagePath)" class="sectionCoverImage"/>
+		<div class="title">
+			@Model.Name
+		</div>
+		@Model.Description
+	</aside>
+	<section id="thumbsContainer">
+        @Html.Partial("_Thumbnails", (@Model.ThumbnailImagePathList))
+	</section>
+</section>
